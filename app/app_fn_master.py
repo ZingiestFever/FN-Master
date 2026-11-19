@@ -147,9 +147,7 @@ def format_kkt_date(d_str, fn_closed=False):
     return d_str
 
 
-# FN_MASTER_V101_FIXES
 def format_fn_expiry(raw_value, phase, fn_closed=False):
-    """Преобразует срок действия ФН в понятную дату."""
     raw = str(raw_value or "").strip()
 
     if phase == 1:
@@ -162,12 +160,10 @@ def format_fn_expiry(raw_value, phase, fn_closed=False):
         return "Не определён"
 
     try:
-        # Резервный формат: ДДММГГ.
         if len(raw) == 6 and raw.isdigit():
             parsed = dt.datetime.strptime(raw, "%d%m%y")
             return parsed.strftime("%d.%m.%Y")
 
-        # Основной формат: количество дней с 01.01.2000.
         if raw.isdigit():
             days = int(raw)
             parsed = (
@@ -175,7 +171,6 @@ def format_fn_expiry(raw_value, phase, fn_closed=False):
                 + dt.timedelta(days=days)
             )
 
-            # Отсекаем явно ошибочные значения вроде 1.
             if parsed < dt.datetime(2016, 1, 1):
                 return "Не определён"
 
@@ -246,10 +241,6 @@ class KKT:
         return sorted(rows, key=lambda x: (not x[2], not x[3], x[4], x[0]))
 
     def connect(self, port, silent=False):
-        """
-        Подключение с автоматическим переподключением (до 3 попыток),
-        если Windows выдаёт PermissionError(13).
-        """
         self.close()
         last_exc = None
 
@@ -399,7 +390,6 @@ class KKT:
         d["fw_tuple"] = tuple(int(x) for x in v[:3] if x.isdigit()) if len(v) >= 3 else (0, 0, 0)
         d["fw_str"] = ".".join(v[:3]) if v else "?"
 
-        # Срок действия ФН: сначала пробуем 0x78/3 (напрямую из ФН), затем 0x02/14
         e_exp, v_exp = self.fn(3, quiet=True)
         raw_exp = v_exp[0] if (e_exp == "00" and v_exp and v_exp[0] != "000000") else ""
         if not raw_exp:
@@ -1463,7 +1453,7 @@ class App(tk.Tk):
         ).start()
 
     # =====================================================================
-    # УЛУЧШЕННАЯ АВТО-ПРОВЕРКА ОФД (С ТИХИМ ПЕРЕПОДКЛЮЧЕНИЕМ И ДИАГНОСТИКОЙ КАЖДЫЕ 15 СЕК)
+    # УЛУЧШЕННАЯ АВТО-ПРОВЕРКА ОФД 
     # =====================================================================
     def _wait_ofd_auto_with_reconnect(
         self,
@@ -1471,13 +1461,6 @@ class App(tk.Tk):
         max_seconds=300,
         allow_err_41=False
     ):
-        """
-        Проверяет очередь ОФД без плановых переподключений.
-
-        Полная диагностика здесь не выполняется. Переподключение
-        происходит только после ошибки связи. Нулевая очередь
-        подтверждается двумя последовательными чтениями.
-        """
         port_to_use = self.kkt.port
 
         if not port_to_use:

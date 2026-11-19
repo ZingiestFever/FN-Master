@@ -4,8 +4,8 @@
                   "runtime/python-3.12.8-amd64.exe":  "71bd44e6b0e91c17558963557e4cdb80b483de9b0a0a9717f06cf896f95ab598",
                   "packages/pyserial-3.5-py2.py3-none-any.whl":  "c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0",
                   "drivers/Viki_VCP_x64.exe":  "118c6d6171bafd75c70043fa92581661909e924355e45e6d5ca5d6e89b49df9e",
-                  "app/fn_master.py":  "9f34f826094afedec7b90514fcfd431c790c4d40e3c0a13839f214caba0b0582",
-                  "app/updater.py":  "9a149e97216820618ebed0fdbe62842c5e3105a7b6b2df8eef81d38f88843b0d",
-                  "app/ui_theme.py":  "466cb293ad16e05467f0021c65a70b36b364332278af45d17915d8cd3a3a6e6c"
+                  "app/fn_master.py":  "a75d0d989b2403af712a2f2d8d0296c35bd37c9189db94b2fe1b7f342742aaec",
+                  "app/updater.py":  "bc47a1e49c367f44fdfc5b73e7bb16c303b6bd0537908781ee0d2fa0e7f315a5",
+                  "app/ui_theme.py":  "e34821f1020d07da691119f53e5d08e69f8aec0f87ae38a47b2c5ee11d7785c4"
               }
 }

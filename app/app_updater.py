@@ -137,10 +137,6 @@ def download(release, name, destination):
 
 
 def safe_app_relative(value):
-    """
-    Разрешает только файлы внутри app/.
-    Блокирует абсолютные пути и выход через ../.
-    """
     if "\\" in value:
         raise RuntimeError(f"Недопустимый путь: {value}")
 
@@ -159,21 +155,14 @@ def safe_app_relative(value):
 
 
 def asset_name(relative):
-    """
-    app/fn_master.py       -> app_fn_master.py
-    app/assets/logo.png    -> app_assets_logo.png
-    app/themes/main.json   -> app_themes_main.json
-    """
     inside_app = PurePosixPath(*relative.parts[1:])
     return "app_" + "_".join(inside_app.parts)
 
 
-# ---------- FN_MASTER_V102: интерфейс обновления ----------
 _status = {"text": "", "active": False, "n": 0}
 
 
 def ui_call(app, func):
-    """Выполняет func в главном потоке через очередь событий."""
     try:
         app.events.put(("call", func))
     except Exception:
@@ -618,8 +607,6 @@ def apply_update(stage, python_exe, main_script, progress=None):
         raise
 
     progress("Запуск новой версии", 95)
-    # Путь к Python передаётся от запущенной старой программы,
-    # поэтому нестандартное расположение Python сохраняется.
     subprocess.Popen(
         [str(python_exe), str(main_script)],
         cwd=str(target_app),
