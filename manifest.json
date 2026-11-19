@@ -5,7 +5,7 @@
                   "packages/pyserial-3.5-py2.py3-none-any.whl":  "c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0",
                   "drivers/Viki_VCP_x64.exe":  "118c6d6171bafd75c70043fa92581661909e924355e45e6d5ca5d6e89b49df9e",
                   "app/fn_master.py":  "a75d0d989b2403af712a2f2d8d0296c35bd37c9189db94b2fe1b7f342742aaec",
-                  "app/updater.py":  "bc47a1e49c367f44fdfc5b73e7bb16c303b6bd0537908781ee0d2fa0e7f315a5",
-                  "app/ui_theme.py":  "e34821f1020d07da691119f53e5d08e69f8aec0f87ae38a47b2c5ee11d7785c4"
+                  "app/ui_theme.py":  "e34821f1020d07da691119f53e5d08e69f8aec0f87ae38a47b2c5ee11d7785c4",
+                  "app/updater.py":  "bc47a1e49c367f44fdfc5b73e7bb16c303b6bd0537908781ee0d2fa0e7f315a5"
               }
 }
