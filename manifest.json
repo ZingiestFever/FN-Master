@@ -1,0 +1,11 @@
+{
+    "version":  "1.0.2",
+    "files":  {
+                  "runtime/python-3.12.8-amd64.exe":  "71bd44e6b0e91c17558963557e4cdb80b483de9b0a0a9717f06cf896f95ab598",
+                  "packages/pyserial-3.5-py2.py3-none-any.whl":  "c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0",
+                  "drivers/Viki_VCP_x64.exe":  "118c6d6171bafd75c70043fa92581661909e924355e45e6d5ca5d6e89b49df9e",
+                  "app/fn_master.py":  "9f34f826094afedec7b90514fcfd431c790c4d40e3c0a13839f214caba0b0582",
+                  "app/updater.py":  "9a149e97216820618ebed0fdbe62842c5e3105a7b6b2df8eef81d38f88843b0d",
+                  "app/ui_theme.py":  "466cb293ad16e05467f0021c65a70b36b364332278af45d17915d8cd3a3a6e6c"
+              }
+}
