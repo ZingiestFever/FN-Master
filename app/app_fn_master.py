@@ -22,7 +22,7 @@ try:
 except Exception:
     ui_theme = None
 
-APP_VERSION = "1.0.2"  # FN_MASTER_V102
+APP_VERSION = "1.0.4"  # FN_MASTER_V102
 
 
 class PlaceholderEntry(tk.Entry):

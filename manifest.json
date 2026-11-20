@@ -1,11 +1,15 @@
 {
-    "version":  "1.0.2",
+    "version":  "1.0.4",
     "files":  {
                   "runtime/python-3.12.8-amd64.exe":  "71bd44e6b0e91c17558963557e4cdb80b483de9b0a0a9717f06cf896f95ab598",
                   "packages/pyserial-3.5-py2.py3-none-any.whl":  "c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0",
                   "drivers/Viki_VCP_x64.exe":  "118c6d6171bafd75c70043fa92581661909e924355e45e6d5ca5d6e89b49df9e",
-                  "app/fn_master.py":  "a75d0d989b2403af712a2f2d8d0296c35bd37c9189db94b2fe1b7f342742aaec",
-                  "app/ui_theme.py":  "e34821f1020d07da691119f53e5d08e69f8aec0f87ae38a47b2c5ee11d7785c4",
-                  "app/updater.py":  "bc47a1e49c367f44fdfc5b73e7bb16c303b6bd0537908781ee0d2fa0e7f315a5"
+                  "app/fn_master.py":  "b4b97454127380fc06345802c77313be6612db060a9d0e155f455ff6e314cd90",
+                  "app/ui_theme.py":  "e19f4ab37e6b477d265ddf304e8e35ac76bf54cd082024731adc2f96bc6daa8c",
+                  "app/updater.py":  "bc47a1e49c367f44fdfc5b73e7bb16c303b6bd0537908781ee0d2fa0e7f315a5",
+                  "app/assets/app.ico":  "41d8f8972c11820cc6ee6a3bbd861e90b7ba0776ff415b528f7a4aab1409ce76",
+                  "app/assets/icon_32.png":  "db0e170caee626cf5322ea6977cbd350450ea3acb190c6a93010227e02563167",
+                  "app/assets/icon_64.png":  "5bfdeee5c6084ce0923770df175025bcc51af1c37c172bece0fdd7ee620f2377",
+                  "app/assets/logo.png":  "0d830ccd25125f95ec004908cc8ce77578c65f72b3315edb84f6e7291e8629f4"
               }
 }
